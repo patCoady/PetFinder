@@ -8,6 +8,7 @@
 </head>
 <body>
 	<p>I'm a Random Pet!!</p>
-	<p>ID: ${pet.petfinder.petIds.id.$t}</p>
+	<!-- //petInfo.getPetfinder().getPet().getName().get$t() -->
+	<p>ID: ${pet.petfinder.pet.name.$t}</p>
 </body>
 </html>

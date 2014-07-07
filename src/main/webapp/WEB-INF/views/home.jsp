@@ -16,8 +16,9 @@
 </h1>
 <p></p>
 <button id ="getRest">REST</button>
-<form name="randomPet" action = "randomPet" method ="get">
+<form name="randomPet" action = "randomPet" method ="POST">
 	<input type ="text" id="randomPet" name ="randomPet"/>
+	<input type ="text" id="petInfo" name ="petInfo"/>
 	<button type="submit">Find Random Pet</button>
 </form>
 

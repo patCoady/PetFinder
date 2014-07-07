@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.patrick.petfinder.entity.petinfo.PetInfo;
 import com.patrick.petfinder.entity.randompet.RandomPet;
 
 /**
@@ -33,14 +34,15 @@ public class HomeController {
 		
 		return "home";
 	}
-	
-	@RequestMapping(value = "randomPet", method = RequestMethod.GET)
-	public String randomPet(Model model, @RequestParam("randomPet") String randomPetInfo){
+	//@RequestParam("petInfo") String petJSON
+	@RequestMapping(value = "randomPet", method = RequestMethod.POST)
+	public String randomPet(Model model, @RequestParam("randomPet") String randomPetInfo, @RequestParam("petInfo") String petJSON){
 		ObjectMapper objectMapper = new ObjectMapper();
 		RandomPet randomPet = null;
-		
+		PetInfo petInfo = null;
 			try {
 				randomPet = objectMapper.readValue(randomPetInfo, RandomPet.class);
+				petInfo = objectMapper.readValue(petJSON, PetInfo.class);
 			} catch (JsonParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -52,7 +54,8 @@ public class HomeController {
 				e.printStackTrace();
 			}
 			logger.info(randomPet.getPetfinder().getPetIds().getId().get$t());
-			model.addAttribute("pet", randomPet);
+			logger.info(petInfo.getPetfinder().getPet().getName().get$t());
+			model.addAttribute("pet", petInfo);
 
 		return "pet";
 	}
