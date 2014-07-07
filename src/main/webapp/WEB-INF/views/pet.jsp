@@ -8,5 +8,6 @@
 </head>
 <body>
 	<p>I'm a Random Pet!!</p>
+	<p>ID: ${pet.petfinder.petIds.id.$t}</p>
 </body>
 </html>

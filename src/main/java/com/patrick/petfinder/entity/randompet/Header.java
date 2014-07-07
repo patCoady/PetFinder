@@ -19,45 +19,11 @@ import org.codehaus.jackson.annotate.JsonPropertyOrder;
 "status",
 "version"
 })
+
 public class Header {
 
-@JsonProperty("timestamp")
-private Timestamp timestamp;
-@JsonProperty("status")
-private Status status;
-@JsonProperty("version")
-private Version version;
+
 private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-@JsonProperty("timestamp")
-public Timestamp getTimestamp() {
-return timestamp;
-}
-
-@JsonProperty("timestamp")
-public void setTimestamp(Timestamp timestamp) {
-this.timestamp = timestamp;
-}
-
-@JsonProperty("status")
-public Status getStatus() {
-return status;
-}
-
-@JsonProperty("status")
-public void setStatus(Status status) {
-this.status = status;
-}
-
-@JsonProperty("version")
-public Version getVersion() {
-return version;
-}
-
-@JsonProperty("version")
-public void setVersion(Version version) {
-this.version = version;
-}
 
 @JsonAnyGetter
 public Map<String, Object> getAdditionalProperties() {
