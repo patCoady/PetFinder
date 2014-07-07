@@ -20,6 +20,11 @@
 <form id ="randomPet" name="randomPet" action = "randomPet" method ="POST">
 	<input type ="hidden" id="petInfo" name ="petInfo"/>
 </form>
+<form id ="petList" name = "petList" action ="petList" method = "POST">
+	<input type ="hidden" id="petListInfo" name ="petListInfo"/>
+	<select id = "catBreedSelect"/>
+	
+</form>
 
 
 </body>
