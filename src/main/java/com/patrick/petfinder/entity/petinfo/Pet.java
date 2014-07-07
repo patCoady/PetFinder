@@ -32,8 +32,8 @@ public class Pet {
 
 /*@JsonProperty("options")
 private Options options;*/
-@JsonProperty("breeds")
-private Breeds breeds;
+/*@JsonProperty("breeds")
+private Breeds breeds;*/
 @JsonProperty("shelterPetId")
 private ShelterPetId shelterPetId;
 @JsonProperty("status")
@@ -74,7 +74,7 @@ public void setOptions(Options options) {
 this.options = options;
 }
 */
-@JsonProperty("breeds")
+/*@JsonProperty("breeds")
 public Breeds getBreeds() {
 return breeds;
 }
@@ -82,7 +82,7 @@ return breeds;
 @JsonProperty("breeds")
 public void setBreeds(Breeds breeds) {
 this.breeds = breeds;
-}
+}*/
 
 @JsonProperty("shelterPetId")
 public ShelterPetId getShelterPetId() {

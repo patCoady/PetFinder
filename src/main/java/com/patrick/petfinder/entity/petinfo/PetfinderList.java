@@ -9,13 +9,13 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
 @Generated("org.jsonschema2pojo")
-@JsonPropertyOrder({ "pet", "@xmlns:xsi", "header",
+@JsonPropertyOrder({ "pets", "@xmlns:xsi", "header",
 		"@xsi:noNamespaceSchemaLocation" })
-public class Petfinder {
+public class PetfinderList {
 
 
-	@JsonProperty("pet")
-	private Pet pet;
+	@JsonProperty("pets")
+	private Pets pets;
 	@JsonProperty("@xmlns:xsi")
 	private String _xmlns_xsi;
 	@JsonProperty("header")
@@ -24,14 +24,14 @@ public class Petfinder {
 	private String _xsi_noNamespaceSchemaLocation;
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-	@JsonProperty("pet")
-	public Pet getPet() {
-		return pet;
+	@JsonProperty("pets")
+	public Pets getPets() {
+		return pets;
 	}
 
-	@JsonProperty("pet")
-	public void setPet(Pet pet) {
-		this.pet = pet;
+	@JsonProperty("pets")
+	public void setPets(Pets pets) {
+		this.pets = pets;
 	}
 
 	@JsonProperty("@xmlns:xsi")

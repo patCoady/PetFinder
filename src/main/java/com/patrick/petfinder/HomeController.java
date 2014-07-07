@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.patrick.petfinder.entity.petinfo.PetInfo;
+import com.patrick.petfinder.entity.petinfo.PetInfoList;
+import com.patrick.petfinder.entity.petinfo.PetfinderList;
 
 /**
  * Handles requests for the application home page.
@@ -50,10 +52,31 @@ public class HomeController {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			//logger.info(petInfo.getPetfinder().getPet().getDescription().);
+			//logger.info(petInfo.getPetfinder().getPets().getPet().get(0).getAge().get$t());
 			model.addAttribute("pet", petInfo);
 
 		return "pet";
+	}
+	@RequestMapping(value = "petList", method = RequestMethod.POST)
+	public String petList(Model model, @RequestParam("petListInfo") String petJSON){
+		ObjectMapper objectMapper = new ObjectMapper();
+		PetInfoList petInfoList = null;
+			try {
+				petInfoList = objectMapper.readValue(petJSON, PetInfoList.class);
+			} catch (JsonParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JsonMappingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			//logger.info(petInfoList.getPetfinder().getPets().getPet().get(0).getAge().get$t());
+			model.addAttribute("pet", petInfoList);
+
+		return "petList";
 	}
 	
 }

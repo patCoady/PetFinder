@@ -22,9 +22,11 @@
 </form>
 <form id ="petList" name = "petList" action ="petList" method = "POST">
 	<input type ="hidden" id="petListInfo" name ="petListInfo"/>
-	<select id = "catBreedSelect"/>
-	
+	<select id = "catBreedSelect"></select>
+	<button id ="getPetList" type ="button">Find Pets</button>
 </form>
+
+
 
 
 </body>

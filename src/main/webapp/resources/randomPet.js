@@ -6,7 +6,7 @@ $.getScript("resources/json.min.js", function(){
 	var randomCatURL = "http://api.petfinder.com/pet.getRandom?format=json&key=0bc49692373b89661b8746532bf5c75b&animal=cat&callback=randomPet";
 	var catBreedsURL = "http://api.petfinder.com/breed.list?format=json&key=0bc49692373b89661b8746532bf5c75b&animal=cat&callback=catBreeds";
 	var petInfoURL = "http://api.petfinder.com/pet.get?format=json&key=0bc49692373b89661b8746532bf5c75b&id=";
-	
+	var petBreedListURL ="http://api.petfinder.com/pet.find?format=json&key=0bc49692373b89661b8746532bf5c75b&location=49008&breed=tiger&callback=petListInfo";
 
   findCatBreeds();
   function findCatBreeds(){
@@ -17,6 +17,10 @@ $.getScript("resources/json.min.js", function(){
 	    });
   }
 
+  $('#getPetList').click(function(){
+	  $.loadScript(petBreedListURL);
+  });
+  
   //Two button to find random pet/cat
   $('#getRandom').click(function() { 
 	  $.loadScript(randomPetURL); 
@@ -44,6 +48,12 @@ $.getScript("resources/json.min.js", function(){
 		var dataString =JSON.stringify(data);
 		$("#petInfo").val(dataString);
 		$('#randomPet').submit();
+	};
+	
+	petListInfo = function(data){
+		var dataString =JSON.stringify(data);
+		$("#petListInfo").val(dataString);
+		$('#petList').submit();
 	};
 	//Call back function for list of cat breeds
 	catBreeds = function(data){
