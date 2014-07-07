@@ -54,7 +54,7 @@ public class HomeController {
 				e.printStackTrace();
 			}
 			logger.info(randomPet.getPetfinder().getPetIds().getId().get$t());
-			logger.info(petInfo.getPetfinder().getPet().getName().get$t());
+			//logger.info(petInfo.getPetfinder().getPet().getDescription().);
 			model.addAttribute("pet", petInfo);
 
 		return "pet";
