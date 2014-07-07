@@ -16,6 +16,7 @@
 			<th>Sex</th>
 			<th>Animal</th>
 			<th>City</th>
+			<th>State</th>
 		</tr>
 		<tr>
 			<td>${pet.petfinder.pet.name.$t}</td>
@@ -23,6 +24,7 @@
 			<td>${pet.petfinder.pet.sex.$t}</td>
 			<td>${pet.petfinder.pet.animal.$t}</td>
 			<td>${pet.petfinder.pet.contact.city.$t}</td>
+			<td>${pet.petfinder.pet.contact.state.$t}</td>
 		</tr>
 	</table>
 	<p>${pet.petfinder.pet.description.$t}</p>
