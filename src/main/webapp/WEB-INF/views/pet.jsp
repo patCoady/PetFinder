@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Pet</title>
+<title>Pet List</title>
 </head>
 <body>
 	<p>I'm a Random Pet!!</p>

@@ -3,13 +3,17 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
+	<script type="text/javascript"
+	src="<c:url value="/resources/jquery-1.4.min.js" />"></script>
+	<script type="text/javascript"
+	src="<c:url value="/resources/pagging.js" />"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Pet</title>
 </head>
 <body>
 	<p>A List of Pets!!</p>
 	<!-- //petInfo.getPetfinder().getPet().getName().get$t() -->
-	<table>
+	<table class = "petList">
 		<tr>
 			<th>Name</th>
 			<th>Age</th>
@@ -18,12 +22,18 @@
 			<th>City</th>
 			<th>State</th>
 		</tr>
+		<tbody>
 			<c:forEach items="${pet.petfinder.pets.pet}" var ="pet">
 				<tr>
 					<td>${pet.name.$t}</td>
+					<td>${pet.age.$t}</td>
+					<td>${pet.sex.$t}</td>
+					<td>${pet.animal.$t}</td>
+					<td>${pet.contact.city.$t}</td>
+					<td>${pet.contact.state.$t}</td>
 				</tr>
 			</c:forEach>
-
+		</tbody>
 	</table>
 <%-- 	<p>${pet.petfinder.pet.description.$t}</p> --%>
 </body>
