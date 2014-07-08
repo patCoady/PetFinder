@@ -42,6 +42,7 @@ $.getScript("resources/json.min.js", function(){
 	        async: false
 	    });
   }
+  //If animalSelect changes to other show #other feild
   $('#animalSelect').change(function() {
 	  if($(this).find('option:selected').val() == "other"){
           $("#other").show();

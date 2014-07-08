@@ -13,7 +13,7 @@
 <body>
 	<p>A List of Pets!!</p>
 	<!-- //petInfo.getPetfinder().getPet().getName().get$t() -->
-	<table class = "petList">
+	<table class = "petList" id ="petList">
 		<tr>
 			<th>Name</th>
 			<th>Age</th>
@@ -35,6 +35,7 @@
 			</c:forEach>
 		</tbody>
 	</table>
-<%-- 	<p>${pet.petfinder.pet.description.$t}</p> --%>
+	<select id ="numRowsPerPage">
+	</select>
 </body>
 </html>
