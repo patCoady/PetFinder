@@ -17,7 +17,6 @@ $.getScript("resources/quickpager.jquery.js", function(){
 	function setRowsPerPage(){
 		var select = document.getElementById("numRowsPerPage");
 		var rowCount = $('#petList tr').length;
-		alert(rowCount);
 		for(var i =1; i<rowCount+1;i++){
 			var option = document.createElement("option");
 			option.text = i;
